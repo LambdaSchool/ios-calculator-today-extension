@@ -95,12 +95,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         calculator.push(operator: .add)
     }
     
+    @IBAction func copyButtonTapped(_ sender: Any) {
+        UIPasteboard.general.string = textField.text
+    }
+    
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         calculator.clear()
         digitAccumulator.clear()
         return true
     }
-        
+    
+    
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
         
