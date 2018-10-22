@@ -15,6 +15,10 @@
 		13087A592152AF5800A03266 /* RPN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13087A572152AEEC00A03266 /* RPN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13087A632152BD5C00A03266 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13087A612152BD5B00A03266 /* Main.storyboard */; };
 		13087A642152BD5C00A03266 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13087A622152BD5C00A03266 /* CalculatorViewController.swift */; };
+		13DDFCCC217E5F5300AF31B2 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13DDFCCB217E5F5300AF31B2 /* NotificationCenter.framework */; };
+		13DDFCCF217E5F5300AF31B2 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDFCCE217E5F5300AF31B2 /* TodayViewController.swift */; };
+		13DDFCD2217E5F5300AF31B2 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13DDFCD0217E5F5300AF31B2 /* MainInterface.storyboard */; };
+		13DDFCD6217E5F5300AF31B2 /* RPNCalculatorToday.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 13DDFCC9217E5F5300AF31B2 /* RPNCalculatorToday.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,13 @@
 			remoteGlobalIDString = 13087A182152AE1100A03266;
 			remoteInfo = RPN;
 		};
+		13DDFCD4217E5F5300AF31B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13087A262152AEBC00A03266 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13DDFCC8217E5F5300AF31B2;
+			remoteInfo = RPNCalculatorToday;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +62,17 @@
 				13087A592152AF5800A03266 /* RPN.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13DDFCDA217E5F5300AF31B2 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				13DDFCD6217E5F5300AF31B2 /* RPNCalculatorToday.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -67,6 +89,11 @@
 		13087A522152AEEC00A03266 /* RPN.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RPN.xcodeproj; path = ../../../RPN/RPN.xcodeproj; sourceTree = "<group>"; };
 		13087A612152BD5B00A03266 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		13087A622152BD5C00A03266 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		13DDFCC9217E5F5300AF31B2 /* RPNCalculatorToday.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RPNCalculatorToday.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		13DDFCCB217E5F5300AF31B2 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		13DDFCCE217E5F5300AF31B2 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		13DDFCD1217E5F5300AF31B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		13DDFCD3217E5F5300AF31B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +112,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13DDFCC6217E5F5300AF31B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DDFCCC217E5F5300AF31B2 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +128,8 @@
 			children = (
 				13087A302152AEBC00A03266 /* Calculator */,
 				13087A452152AEBE00A03266 /* CalculatorTests */,
+				13DDFCCD217E5F5300AF31B2 /* RPNCalculatorToday */,
+				13DDFCCA217E5F5300AF31B2 /* Frameworks */,
 				13087A2F2152AEBC00A03266 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +139,7 @@
 			children = (
 				13087A2E2152AEBC00A03266 /* Calculator.app */,
 				13087A422152AEBE00A03266 /* CalculatorTests.xctest */,
+				13DDFCC9217E5F5300AF31B2 /* RPNCalculatorToday.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +183,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		13DDFCCA217E5F5300AF31B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13DDFCCB217E5F5300AF31B2 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		13DDFCCD217E5F5300AF31B2 /* RPNCalculatorToday */ = {
+			isa = PBXGroup;
+			children = (
+				13DDFCCE217E5F5300AF31B2 /* TodayViewController.swift */,
+				13DDFCD0217E5F5300AF31B2 /* MainInterface.storyboard */,
+				13DDFCD3217E5F5300AF31B2 /* Info.plist */,
+			);
+			path = RPNCalculatorToday;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,11 +212,13 @@
 				13087A2B2152AEBC00A03266 /* Frameworks */,
 				13087A2C2152AEBC00A03266 /* Resources */,
 				13087A5C2152AF5800A03266 /* Embed Frameworks */,
+				13DDFCDA217E5F5300AF31B2 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				13087A5B2152AF5800A03266 /* PBXTargetDependency */,
+				13DDFCD5217E5F5300AF31B2 /* PBXTargetDependency */,
 			);
 			name = Calculator;
 			productName = Calculator;
@@ -185,6 +243,23 @@
 			productReference = 13087A422152AEBE00A03266 /* CalculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		13DDFCC8217E5F5300AF31B2 /* RPNCalculatorToday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13DDFCD9217E5F5300AF31B2 /* Build configuration list for PBXNativeTarget "RPNCalculatorToday" */;
+			buildPhases = (
+				13DDFCC5217E5F5300AF31B2 /* Sources */,
+				13DDFCC6217E5F5300AF31B2 /* Frameworks */,
+				13DDFCC7217E5F5300AF31B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPNCalculatorToday;
+			productName = RPNCalculatorToday;
+			productReference = 13DDFCC9217E5F5300AF31B2 /* RPNCalculatorToday.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -201,6 +276,9 @@
 					13087A412152AEBE00A03266 = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = 13087A2D2152AEBC00A03266;
+					};
+					13DDFCC8217E5F5300AF31B2 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -225,6 +303,7 @@
 			targets = (
 				13087A2D2152AEBC00A03266 /* Calculator */,
 				13087A412152AEBE00A03266 /* CalculatorTests */,
+				13DDFCC8217E5F5300AF31B2 /* RPNCalculatorToday */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +336,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13DDFCC7217E5F5300AF31B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DDFCD2217E5F5300AF31B2 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -277,6 +364,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		13DDFCC5217E5F5300AF31B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13DDFCCF217E5F5300AF31B2 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -290,6 +385,11 @@
 			name = RPN;
 			targetProxy = 13087A5A2152AF5800A03266 /* PBXContainerItemProxy */;
 		};
+		13DDFCD5217E5F5300AF31B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13DDFCC8217E5F5300AF31B2 /* RPNCalculatorToday */;
+			targetProxy = 13DDFCD4217E5F5300AF31B2 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -299,6 +399,14 @@
 				13087A3B2152AEBD00A03266 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		13DDFCD0217E5F5300AF31B2 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13DDFCD1217E5F5300AF31B2 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -423,6 +531,7 @@
 		13087A4C2152AEBE00A03266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Calculator/Info.plist;
@@ -440,6 +549,7 @@
 		13087A4D2152AEBE00A03266 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Calculator/Info.plist;
@@ -494,6 +604,42 @@
 			};
 			name = Release;
 		};
+		13DDFCD7217E5F5300AF31B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RPNCalculatorToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Conner.Lambda.Calculator.RPNCalculatorToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13DDFCD8217E5F5300AF31B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RPNCalculatorToday/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Conner.Lambda.Calculator.RPNCalculatorToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +666,15 @@
 			buildConfigurations = (
 				13087A4F2152AEBE00A03266 /* Debug */,
 				13087A502152AEBE00A03266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13DDFCD9217E5F5300AF31B2 /* Build configuration list for PBXNativeTarget "RPNCalculatorToday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13DDFCD7217E5F5300AF31B2 /* Debug */,
+				13DDFCD8217E5F5300AF31B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
