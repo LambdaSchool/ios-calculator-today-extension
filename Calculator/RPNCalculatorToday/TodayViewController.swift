@@ -13,6 +13,7 @@ import RPN
 class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet var calculatorView: UIView!
+    @IBOutlet var showCalculatorLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
@@ -23,9 +24,11 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         case .compact:
             preferredContentSize = maxSize
             self.calculatorView.isHidden = true
+            self.showCalculatorLabel.isHidden = false
         case .expanded:
             preferredContentSize = CGSize(width: maxSize.width, height: 450)
             self.calculatorView.isHidden = false
+            self.showCalculatorLabel.isHidden = true
         }
     }
     

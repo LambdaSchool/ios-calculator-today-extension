@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="465"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click &quot;Show More&quot; to Display Calculator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28c-ft-CON">
+                                <rect key="frame" x="10" y="10" width="300" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="91v-mY-uWg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="465"/>
                                 <subviews>
@@ -189,8 +195,11 @@
                             </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="28c-ft-CON" secondAttribute="trailing" constant="10" id="2rr-zG-8ux"/>
+                            <constraint firstItem="28c-ft-CON" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="10" id="D2m-CY-n2d"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="91v-mY-uWg" secondAttribute="trailing" id="LEh-ZW-IBQ"/>
                             <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="91v-mY-uWg" secondAttribute="bottom" id="S0X-C9-Of9"/>
+                            <constraint firstItem="28c-ft-CON" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" constant="10" id="nmC-Nj-UPH"/>
                             <constraint firstItem="91v-mY-uWg" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="nzh-fY-k62"/>
                             <constraint firstItem="91v-mY-uWg" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="o3e-bA-3ni"/>
                         </constraints>
@@ -200,7 +209,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="465"/>
                     <connections>
-                        <outlet property="calculatorView" destination="S3S-Oj-5AN" id="byH-DT-Emy"/>
+                        <outlet property="calculatorView" destination="91v-mY-uWg" id="Egg-EV-zW7"/>
+                        <outlet property="showCalculatorLabel" destination="28c-ft-CON" id="muz-f3-qie"/>
                         <outlet property="textField" destination="wVb-tq-kMJ" id="A4C-Lb-Q1O"/>
                     </connections>
                 </viewController>
