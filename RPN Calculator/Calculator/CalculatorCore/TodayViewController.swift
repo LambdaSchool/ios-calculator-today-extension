@@ -103,9 +103,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func copyResult(_ sender: UIButton) {
         guard let value = textField.text else {return}
-        pasteBoard.setValue(value, forPasteboardType: "value")
-        print("\(pasteBoard.value(forKey: "value")) is copied to your clipboard ")
-        
+        pasteBoard.string = value
+        if let saved = pasteBoard.string{
+            print("\(saved) is copied to your clipboard ")
+        }
     }
     
     let pasteBoard = UIPasteboard.general
