@@ -74,6 +74,7 @@
 		39A2C2BC217E80910007C5DD /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		39A2C2BF217E80910007C5DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		39A2C2C1217E80910007C5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39A2C2CE217EBC720007C5DD /* CalculatorWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalculatorWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 		39A2C2BB217E80910007C5DD /* CalculatorWidget */ = {
 			isa = PBXGroup;
 			children = (
+				39A2C2CE217EBC720007C5DD /* CalculatorWidget.entitlements */,
 				39A2C2BC217E80910007C5DD /* TodayViewController.swift */,
 				39A2C2BE217E80910007C5DD /* MainInterface.storyboard */,
 				39A2C2C1217E80910007C5DD /* Info.plist */,
@@ -215,6 +217,11 @@
 					};
 					39A2C2B8217E80910007C5DD = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -481,6 +488,7 @@
 		39A2C2C6217E80910007C5DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CalculatorWidget/CalculatorWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39ZVY2XGME;
 				INFOPLIST_FILE = CalculatorWidget/Info.plist;
@@ -500,6 +508,7 @@
 		39A2C2C7217E80910007C5DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CalculatorWidget/CalculatorWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39ZVY2XGME;
 				INFOPLIST_FILE = CalculatorWidget/Info.plist;

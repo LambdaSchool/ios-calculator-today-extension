@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-t4-S16">
-                                <rect key="frame" x="6.5" y="30" width="307" height="398"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZtR-t4-S16">
+                                <rect key="frame" x="6.5" y="30" width="307" height="445"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Il9-4e-kK3">
                                         <rect key="frame" x="0.0" y="0.0" width="307" height="70"/>
@@ -31,7 +30,7 @@
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-Ue-Twf">
-                                        <rect key="frame" x="0.0" y="82" width="307" height="70"/>
+                                        <rect key="frame" x="0.0" y="75" width="307" height="70"/>
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M95-S5-lOH">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="70"/>
@@ -60,7 +59,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-0F-akq">
                                                 <rect key="frame" x="249" y="0.0" width="58" height="70"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
-                                                <state key="normal" title="%"/>
+                                                <state key="normal" title="÷"/>
                                                 <connections>
                                                     <action selector="divideButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="090-K4-HIS"/>
                                                 </connections>
@@ -68,7 +67,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="i89-QL-xa3">
-                                        <rect key="frame" x="0.0" y="164" width="307" height="70"/>
+                                        <rect key="frame" x="0.0" y="150" width="307" height="70"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdd-j1-7q1">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="70"/>
@@ -97,7 +96,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8n-AW-BKc">
                                                 <rect key="frame" x="249" y="0.0" width="58" height="70"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
-                                                <state key="normal" title="x"/>
+                                                <state key="normal" title="×"/>
                                                 <connections>
                                                     <action selector="multiplyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GqW-mX-u8Z"/>
                                                 </connections>
@@ -106,7 +105,7 @@
                                         <viewLayoutGuide key="safeArea" id="Uiv-0w-7Sf"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Nu0-bV-HcX">
-                                        <rect key="frame" x="0.0" y="246" width="307" height="70"/>
+                                        <rect key="frame" x="0.0" y="225" width="307" height="70"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5Z-OH-Z57">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="70"/>
@@ -135,7 +134,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCC-E2-NXp">
                                                 <rect key="frame" x="249" y="0.0" width="58" height="70"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="48"/>
-                                                <state key="normal" title="-"/>
+                                                <state key="normal" title="–"/>
                                                 <connections>
                                                     <action selector="subtractButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EIm-of-CKH"/>
                                                 </connections>
@@ -144,7 +143,7 @@
                                         <viewLayoutGuide key="safeArea" id="KXP-Ju-hc0"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="fP9-7i-LTl">
-                                        <rect key="frame" x="0.0" y="328" width="307" height="70"/>
+                                        <rect key="frame" x="0.0" y="300" width="307" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZA-oW-eit">
                                                 <rect key="frame" x="0.0" y="0.0" width="58" height="70"/>
@@ -180,6 +179,47 @@
                                             </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="Bqk-Wy-mTP"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="bZh-eD-9cy">
+                                        <rect key="frame" x="0.0" y="375" width="307" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seb-QB-Avp">
+                                                <rect key="frame" x="0.0" y="0.0" width="58" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="1" green="0.56257377509999995" blue="0.75894317629999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="■"/>
+                                                <connections>
+                                                    <action selector="changeThemeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Iy-gx-H3M"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jt-7E-AZs">
+                                                <rect key="frame" x="83" y="0.0" width="58" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.60450996889999997" green="0.68512037719999996" blue="0.96311865480000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="■"/>
+                                                <connections>
+                                                    <action selector="changeThemeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXL-pS-v9F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRd-yr-jcn">
+                                                <rect key="frame" x="166" y="0.0" width="58" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.96311865480000003" green="0.57138852089975989" blue="0.30453771575565131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="■"/>
+                                                <connections>
+                                                    <action selector="changeThemeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="55r-K2-5eq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t98-y1-zXK">
+                                                <rect key="frame" x="249" y="0.0" width="58" height="70"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="tintColor" red="0.54566055949094439" green="0.80749914574829762" blue="0.94783074236345177" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="■"/>
+                                                <connections>
+                                                    <action selector="changeThemeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDx-xE-DVe"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
