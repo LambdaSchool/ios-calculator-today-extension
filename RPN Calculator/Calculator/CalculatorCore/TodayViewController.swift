@@ -20,8 +20,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         switch activeDisplayMode {
         case .compact:
             preferredContentSize = maxSize
+
+//            stackViewCollapsed.isUserInteractionEnabled = true
+            stackViewCollapsed.isHidden = false
+//            stackViewExpanded.isUserInteractionEnabled = false
+            stackViewExpanded.isHidden = true
         case .expanded:
             preferredContentSize = CGSize(width: maxSize.width, height: 300)
+//            stackViewExpanded.isUserInteractionEnabled = true
+            stackViewExpanded.isHidden = false
+//            stackViewCollapsed.isUserInteractionEnabled = false
+            stackViewCollapsed.isHidden = true
         }
     }
     
@@ -29,7 +38,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         completionHandler(NCUpdateResult.newData)
     }
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var collapsedTextField: UITextField!
+    
+    @IBOutlet weak var expandedTextField: UITextField!
     
     private let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -43,9 +54,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private var calculator = Calculator() {
         didSet {
             if let value = calculator.topValue {
-                textField.text = numberFormatter.string(from: value as NSNumber)
+                valueString = numberFormatter.string(from: value as NSNumber)
             } else {
-                textField.text = ""
+                valueString = ""
             }
         }
     }
@@ -53,9 +64,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private var digitAccumulator = DigitAccumulator() {
         didSet {
             if let value = digitAccumulator.value() {
-                textField.text = numberFormatter.string(from: value as NSNumber)
+                valueString = numberFormatter.string(from: value as NSNumber)
             } else {
-                textField.text = ""
+                valueString = ""
             }
         }
     }
@@ -102,12 +113,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     @IBAction func copyResult(_ sender: UIButton) {
-        guard let value = textField.text else {return}
+        guard let value = valueString else {return}
         pasteBoard.string = value
         if let saved = pasteBoard.string{
             print("\(saved) is copied to your clipboard ")
         }
     }
     
+    @IBOutlet var stackViewCollapsed: UIStackView!
+    @IBOutlet weak var stackViewExpanded: UIStackView!
     let pasteBoard = UIPasteboard.general
+    private var valueString:String?{
+        didSet{
+            expandedTextField.text = valueString
+            collapsedTextField.text = valueString
+        }
+    }
 }
