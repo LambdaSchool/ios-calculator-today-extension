@@ -26,7 +26,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         didSet {
             if let value = calculator.topValue {
                 textField.text = numberFormatter.string(from: value as NSNumber)
-                pasteboard.setValue(value, forPasteboardType: "NumberSaved")
             } else {
                 textField.text = ""
             }
@@ -78,11 +77,15 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         calculator.push(operator: .add)
     }
     
+    @IBAction func copyTextField(_ sender: Any) {
+        UIPasteboard.general.string = textField.text
+    }
+    
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         calculator.clear()
         digitAccumulator.clear()
         return true
     }
     
-    let pasteboard = UIPasteboard(name: UIPasteboard.Name(rawValue: "RPNCalculatorPasteboard"), create: true)!
+    //let pasteboard = UIPasteboard(name: UIPasteboard.Name(rawValue: "RPNCalculatorPasteboard"), create: true)!
 }

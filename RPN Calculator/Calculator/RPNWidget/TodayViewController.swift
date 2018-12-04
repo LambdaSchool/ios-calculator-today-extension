@@ -31,8 +31,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         
-        let numberSaved = 0.0 //pasteboard.value(forKey: "NumberSaved") as? Double ?? 0.0
-        self.numberSavedLabel.text = "\(numberSaved)"
+        let numberSaved = UIPasteboard.general.string
+        self.numberSavedLabel.text = numberSaved
         completionHandler(.newData)
     }
     
