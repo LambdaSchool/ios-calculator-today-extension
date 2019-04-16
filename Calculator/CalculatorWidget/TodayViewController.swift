@@ -47,6 +47,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
+    @IBAction func copyNumberButtonTapped(_ sender: UIButton) {
+        guard let number = calculatorTextField.text else { return }
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = number
+    }
+    
     @IBAction func numberButtonTapped(_ sender: UIButton) {
         try? digitAccumulator.add(digit: .number(sender.tag))
     }
