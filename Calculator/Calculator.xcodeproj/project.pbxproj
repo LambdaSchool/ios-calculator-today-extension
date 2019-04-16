@@ -102,6 +102,8 @@
 		77E85E5622667F1A0053E220 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		77E85E5922667F1A0053E220 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		77E85E5B22667F1A0053E220 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E85E6622668DC10053E220 /* Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Calculator.entitlements; sourceTree = "<group>"; };
+		77E85E6722668DE90053E220 /* CalculatorWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CalculatorWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		776192B32239688C00AE3AC4 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				77E85E6622668DC10053E220 /* Calculator.entitlements */,
 				776192B42239688C00AE3AC4 /* AppDelegate.swift */,
 				776192F222397B1500AE3AC4 /* CalculatorViewController.swift */,
 				776192F422397B3C00AE3AC4 /* Main.storyboard */,
@@ -196,6 +199,7 @@
 		77E85E5522667F1A0053E220 /* CalculatorWidget */ = {
 			isa = PBXGroup;
 			children = (
+				77E85E6722668DE90053E220 /* CalculatorWidget.entitlements */,
 				77E85E5622667F1A0053E220 /* TodayViewController.swift */,
 				77E85E5822667F1A0053E220 /* MainInterface.storyboard */,
 				77E85E5B22667F1A0053E220 /* Info.plist */,
@@ -275,6 +279,11 @@
 					776192B02239688C00AE3AC4 = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					776192C42239688D00AE3AC4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -283,6 +292,11 @@
 					};
 					77E85E5122667F1A0053E220 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -544,6 +558,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Calculator/Calculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBKK7B5HAP;
 				INFOPLIST_FILE = Calculator/Info.plist;
@@ -563,6 +578,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Calculator/Calculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBKK7B5HAP;
 				INFOPLIST_FILE = Calculator/Info.plist;
@@ -623,6 +639,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = CalculatorWidget/CalculatorWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBKK7B5HAP;
 				INFOPLIST_FILE = CalculatorWidget/Info.plist;
@@ -644,6 +661,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CODE_SIGN_ENTITLEMENTS = CalculatorWidget/CalculatorWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HBKK7B5HAP;
 				INFOPLIST_FILE = CalculatorWidget/Info.plist;

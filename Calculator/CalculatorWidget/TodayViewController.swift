@@ -14,7 +14,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let text = userDefaults.string(forKey: "textFieldNumber") {
+            calculatorTextField.text = text
+        }
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
     }
         
@@ -91,9 +93,13 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private var calculator = Calculator() {
         didSet {
             if let value = calculator.topValue {
-                calculatorTextField.text = numberFormatter.string(from: value as NSNumber)
+                let numberString = numberFormatter.string(from: value as NSNumber)
+                calculatorTextField.text = numberString
+                userDefaults.set(numberString, forKey: "textFieldNumber")
+                
             } else {
                 calculatorTextField.text = ""
+                userDefaults.removeObject(forKey: "textFieldNumber")
             }
         }
     }
@@ -101,12 +107,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private var digitAccumulator = DigitAccumulator() {
         didSet {
             if let value = digitAccumulator.value() {
-                calculatorTextField.text = numberFormatter.string(from: value as NSNumber)
+                let numberString = numberFormatter.string(from: value as NSNumber)
+                calculatorTextField.text = numberString
+                userDefaults.set(numberString, forKey: "textFieldNumber")
             } else {
                 calculatorTextField.text = ""
+                userDefaults.removeObject(forKey: "textFieldNumber")
             }
         }
     }
+    
+    let userDefaults = UserDefaults(suiteName: "group.com.nateyoungren.Calculator")!
     
     private let numberFormatter: NumberFormatter = {
         let formatter = NumberFormatter()

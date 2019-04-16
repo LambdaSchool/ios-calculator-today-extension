@@ -11,6 +11,13 @@ import RPN
 
 class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let text = userDefaults.string(forKey: "textFieldNumber") {
+            textField.text = text
+        }
+    }
+    
     @IBOutlet var textField: UITextField!
     
     private let numberFormatter: NumberFormatter = {
@@ -25,9 +32,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     private var calculator = Calculator() {
         didSet {
             if let value = calculator.topValue {
-                textField.text = numberFormatter.string(from: value as NSNumber)
+                let numberString = numberFormatter.string(from: value as NSNumber)
+                textField.text = numberString
+                userDefaults.set(numberString, forKey: "textFieldNumber")
             } else {
                 textField.text = ""
+                userDefaults.removeObject(forKey: "textFieldNumber")
             }
         }
     }
@@ -35,9 +45,12 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
     private var digitAccumulator = DigitAccumulator() {
         didSet {
             if let value = digitAccumulator.value() {
-                textField.text = numberFormatter.string(from: value as NSNumber)
+                let numberString = numberFormatter.string(from: value as NSNumber)
+                textField.text = numberString
+                userDefaults.set(numberString, forKey: "textFieldNumber")
             } else {
                 textField.text = ""
+                userDefaults.removeObject(forKey: "textFieldNumber")
             }
         }
     }
@@ -81,4 +94,6 @@ class CalculatorViewController: UIViewController, UITextFieldDelegate {
         digitAccumulator.clear()
         return true
     }
+    
+    let userDefaults = UserDefaults(suiteName: "group.com.nateyoungren.Calculator")!
 }
